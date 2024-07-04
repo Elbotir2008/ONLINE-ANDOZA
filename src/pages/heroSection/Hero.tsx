@@ -7,7 +7,9 @@ interface HeroProps {
   selectLan: string;
   setSelectLan: Dispatch<SetStateAction<string>>;
 }
-const Hero: React.FC<HeroProps> = ({ dark, setDark, selectLan, setSelectLan }) => {
+const Hero: React.FC<HeroProps> = (
+  // { dark, setDark, selectLan, setSelectLan }
+  ) => {
   return (
     <section className="hero-section">
       <div className="container">

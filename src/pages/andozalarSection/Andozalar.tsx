@@ -8,7 +8,9 @@ interface AndozalarProps {
   selectLan: string;
   setSelectLan: Dispatch<SetStateAction<string>>;
 }
-const Andozalar: React.FC<AndozalarProps> = ({ dark, setDark, selectLan, setSelectLan }) => {
+const Andozalar: React.FC<AndozalarProps> = (
+  // { dark, setDark, selectLan, setSelectLan }
+  ) => {
   const [andozaArr, setAndozaArr] = useState([])
 
   const fetchAndoza = async () => {

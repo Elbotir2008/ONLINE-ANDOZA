@@ -9,7 +9,9 @@ interface HeaderProps {
   selectLan: string;
   setSelectLan: Dispatch<SetStateAction<string>>;
 }
-const Header: React.FC<HeaderProps> = ({ dark, setDark, selectLan, setSelectLan }) => {
+const Header: React.FC<HeaderProps> = (
+  // { dark, setDark, selectLan, setSelectLan }
+  ) => {
   const [changeColor1, setChangeColor1] = useState(false);
   const [changeColor2, setChangeColor2] = useState(false);
   const [changeColor3, setChangeColor3] = useState(false);

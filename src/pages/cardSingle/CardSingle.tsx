@@ -7,7 +7,9 @@ interface HeaderProps {
   selectLan: string;
   setSelectLan: Dispatch<SetStateAction<string>>;
 }
-const CardSingle: React.FC<HeaderProps> = ({ dark, setDark, selectLan, setSelectLan }) => {
+const CardSingle: React.FC<HeaderProps> = (
+  // { dark, setDark, selectLan, setSelectLan }
+  ) => {
   return (
     <div>
     </div>

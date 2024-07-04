@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 // import AboutUs from "./pages/aboutusSection/AboutUs";

@@ -1,7 +1,17 @@
 import "./footer.scss"
-const Footer = () => {
+import { Dispatch, SetStateAction } from "react"
+
+interface AndozalarProps {
+    dark: boolean;
+    setDark: Dispatch<SetStateAction<boolean>>;
+    selectLan: string;
+    setSelectLan: Dispatch<SetStateAction<string>>;
+}
+const Footer: React.FC<AndozalarProps> = (
+    // { dark, setDark, selectLan, setSelectLan }
+) => {
     return (
-        <footer>
+        <footer id="contact">
             <div className="container">
                 <div className="footer-grid grid-class">
                     <div className="grid">
@@ -131,7 +141,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-bottom flex-class">
-                    <p>©️ Asadov Elbotird - All rights reserved</p>
+                    <p>©️ Asadov Elbotir - All rights reserved</p>
                     <ul className="flex-class">
                         <li>Terms & Condition </li>
                         <li>Privacy Police</li>

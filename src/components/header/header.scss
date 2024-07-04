@@ -10,7 +10,14 @@ header {
   nav {
     justify-content: space-between;
     .nav-links {
+      img {
+        cursor: pointer;
+        margin-left: -8rem;
+        margin-top: -1.5rem;
+        width: 30rem;
+      }
       ul {
+        margin-left: -5rem;
         gap: 4rem;
         li {
           font-size: 1.5rem;
@@ -138,6 +145,7 @@ header {
         box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
         padding: 0.25rem;
         width: 300px;
+        height: 4rem;
         font-size: 14px;
       }
 

@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = (
   // { dark, setDark, selectLan, setSelectLan }
   ) => {
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="home">
       <div className="container">
         <div className="hero-flex flex-class">
           <div className="hero-texts">

@@ -1,0 +1,49 @@
+.about-section {
+  width: 100%;
+  h1 {
+    font-size: 5rem;
+    color: #732f3c;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    text-align: center;
+    line-height: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .about-tools {
+    gap: 2rem;
+    margin-left: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    .about-texts {
+      margin-left: 10rem;
+      span {
+        font-size: 2rem;
+        color: #D93728;
+        font-weight: 700;
+      }
+      h2 {
+        margin-top: 2rem;
+        width: 60rem;
+        font-size: 4rem;
+        color: #732f3c;
+        font-weight: 700;
+      }
+      p {
+        line-height: 2.8rem;
+        width: 47rem;
+        color: #732F3C;
+        margin-top: 5rem;
+        font-size: 2rem;
+      }
+      button {
+        margin-top: 5rem;
+        border-radius: 1rem;
+        padding: 1.5rem 4rem;
+        background-color: #732f3c;
+        font-size: 1.7rem;
+        color: #fff;
+      }
+    }
+  }
+}

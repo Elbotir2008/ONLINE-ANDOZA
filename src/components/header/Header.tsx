@@ -11,7 +11,7 @@ interface HeaderProps {
 }
 const Header: React.FC<HeaderProps> = (
   // { dark, setDark, selectLan, setSelectLan }
-  ) => {
+) => {
   const [changeColor1, setChangeColor1] = useState(false);
   const [changeColor2, setChangeColor2] = useState(false);
   const [changeColor3, setChangeColor3] = useState(false);
@@ -24,11 +24,12 @@ const Header: React.FC<HeaderProps> = (
     setChangeColor4(setColor4);
   };
   return (
-    <header id="home">
+    <header>
       <div className="container">
         <nav className="flex-class">
           <div className="nav-links">
             <ul className="flex-class">
+              <img src="./logo.png" alt="Error" onClick={() => location.reload()} />
               <li style={
                 changeColor1
                   ? { textDecoration: "underline" }
@@ -64,8 +65,6 @@ const Header: React.FC<HeaderProps> = (
                 onClick={() => handleLinkClick(false, false, false, true)}
               >BIZ BILAN BOG’LANING</a>
               </li>
-
-              <h1 onClick={() => location.reload()}>ONLINE ANDOZA</h1>
             </ul>
           </div>
           <div className="nav-btns flex-class">

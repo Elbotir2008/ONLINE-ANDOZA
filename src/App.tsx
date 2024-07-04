@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-// import AboutUs from "./pages/aboutusSection/AboutUs";
+import AboutUs from "./pages/aboutusSection/AboutUs";
 import Andozalar from "./pages/andozalarSection/Andozalar";
 import Category from "./pages/categoriesSection/Category";
 import Hero from "./pages/heroSection/Hero";
@@ -38,9 +38,24 @@ function App() {
         selectLan={selectLan}
         setSelectLan={setSelectLan}
       />
-      <Category />
-      {/* <AboutUs />          */}
-      <Footer />
+      <Category
+        dark={dark}
+        setDark={setDark}
+        selectLan={selectLan}
+        setSelectLan={setSelectLan}
+      />
+      <AboutUs
+        dark={dark}
+        setDark={setDark}
+        selectLan={selectLan}
+        setSelectLan={setSelectLan}
+      />
+      <Footer
+        dark={dark}
+        setDark={setDark}
+        selectLan={selectLan}
+        setSelectLan={setSelectLan}
+      />
     </main>
   )
 }

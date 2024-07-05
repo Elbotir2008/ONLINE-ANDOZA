@@ -1,49 +1,41 @@
 import "./footer.scss"
-import { Dispatch, SetStateAction } from "react"
-
 interface AndozalarProps {
     dark: boolean;
-    setDark: Dispatch<SetStateAction<boolean>>;
     selectLan: string;
-    setSelectLan: Dispatch<SetStateAction<string>>;
 }
 const Footer: React.FC<AndozalarProps> = (
-    // { dark, setDark, selectLan, setSelectLan }
+    {
+        dark,
+        selectLan
+    }
 ) => {
+
     return (
-        <footer id="contact">
+        <footer id="contact" style={dark ? { backgroundColor: "#121212" } : {}}>
             <div className="container">
                 <div className="footer-grid grid-class">
                     <div className="grid">
-                        <h1>Online Andoza</h1>
-                        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        <h1 style={dark ? { color: "#fff" } : {}}>Online Andoza</h1>
+                        <p style={dark ? { color: "#ccc" } : {}}>
+                            {selectLan == "uz" ? "Biz bilan bog'lanishingiz uchun pastagi ilovalarning ustiga bosib, contactimizni olishingiz va bizga yozishingiz mumkin." : ""}
+                            {selectLan == "en" ? "To contact us, you can click on the application below, get our contact and write to us." : ""}
+                            {selectLan == "ru" ? "Чтобы связаться с нами, вы можете нажать на заявку ниже, получить наши контакты и написать нам." : ""}
+                        </p>
                         <div className="socialFlex flex-class">
                             <ul className="example-2">
                                 <li className="icon-content">
                                     <a
-                                        href="https://linkedin.com/"
+                                        href="https://t.me/adiba_atelier"
                                         aria-label="LinkedIn"
                                         data-social="linkedin"
                                     >
                                         <div className="filled"></div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="16"
-                                            height="16"
-                                            fill="currentColor"
-                                            className="bi bi-linkedin"
-                                            viewBox="0 0 16 16"
-                                        >
-                                            <path
-                                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                                                fill="currentColor"
-                                            ></path>
-                                        </svg>
+                                        <svg fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"></g><g id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path d="M16 0.5c-8.563 0-15.5 6.938-15.5 15.5s6.938 15.5 15.5 15.5c8.563 0 15.5-6.938 15.5-15.5s-6.938-15.5-15.5-15.5zM23.613 11.119l-2.544 11.988c-0.188 0.85-0.694 1.056-1.4 0.656l-3.875-2.856-1.869 1.8c-0.206 0.206-0.381 0.381-0.781 0.381l0.275-3.944 7.181-6.488c0.313-0.275-0.069-0.431-0.482-0.156l-8.875 5.587-3.825-1.194c-0.831-0.262-0.85-0.831 0.175-1.231l14.944-5.763c0.694-0.25 1.3 0.169 1.075 1.219z"></path> </g></svg>
                                     </a>
-                                    <div className="tooltip">LinkedIn</div>
+                                    <div className="tooltip">Telegram</div>
                                 </li>
                                 <li className="icon-content">
-                                    <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+                                    <a href="https://github.com/Elbotir2008/ONLINE-ANDOZA" aria-label="GitHub" data-social="github">
                                         <div className="filled"></div>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +55,7 @@ const Footer: React.FC<AndozalarProps> = (
                                 </li>
                                 <li className="icon-content">
                                     <a
-                                        href="https://www.instagram.com/"
+                                        href="https://www.instagram.com/adiba_9208?igsh=azRuazgwb3ZzNzR3"
                                         aria-label="Instagram"
                                         data-social="instagram"
                                     >
@@ -85,7 +77,7 @@ const Footer: React.FC<AndozalarProps> = (
                                     <div className="tooltip">Instagram</div>
                                 </li>
                                 <li className="icon-content">
-                                    <a href="https://youtube.com/" aria-label="Youtube" data-social="youtube">
+                                    <a href="https://www.youtube.com/@anvariskandarov8627" aria-label="Youtube" data-social="youtube">
                                         <div className="filled"></div>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -109,30 +101,84 @@ const Footer: React.FC<AndozalarProps> = (
                         </div>
                     </div>
                     <div className="grid">
-                        <h1>Xizmatlarimiz</h1>
-                        <ul>
-                            <li>Yordam & Support</li>
-                            <li>Andozalar</li>
-                            <li>Narxlar</li>
+                        <h1 style={dark ? { color: "#fff" } : {}}>
+                            {selectLan == "uz" ? "Xizmatlarimiz" : ""}
+                            {selectLan == "en" ? "Our services" : ""}
+                            {selectLan == "ru" ? "Наши сервисы" : ""}
+                        </h1>
+                        <ul style={dark ? { color: "#ccc" } : {}}>
+                            <li >
+                                {selectLan == "uz" ? "Yordam & Support" : ""}
+                                {selectLan == "en" ? "Help & Support" : ""}
+                                {selectLan == "ru" ? "Помощь и поддержка" : ""}
+                            </li>
+                            <li>
+                                {selectLan == "uz" ? "Andozalar" : ""}
+                                {selectLan == "en" ? "Templates" : ""}
+                                {selectLan == "ru" ? "Шаблоны" : ""}
+                            </li>
+                            <li>
+                                {selectLan == "uz" ? "Narxlar" : ""}
+                                {selectLan == "en" ? "Prices" : ""}
+                                {selectLan == "ru" ? "Цены" : ""}
+                            </li>
                             <li>FAQ</li>
                         </ul>
                     </div>
                     <div className="grid">
-                        <h1>Andozalar</h1>
-                        <ul>
-                            <li>Erkaklar</li>
-                            <li>Ayollar</li>
-                            <li>Ayollar</li>
-                            <li>Ko’ylaklar</li>
-                            <li>Koftalar</li>
-                            <li>Shimlar</li>
-                            <li>Bolalar kiyimlari</li>
+                        <h1 style={dark ? { color: "#fff" } : {}}>
+                            {selectLan == "uz" ? "Andozalar" : ""}
+                            {selectLan == "en" ? "Templates" : ""}
+                            {selectLan == "ru" ? "Шаблоны" : ""}
+                        </h1>
+                        <ul style={dark ? { color: "#ccc" } : {}}>
+                            <li>
+                                {selectLan == "uz" ? "Erkaklar" : ""}
+                                {selectLan == "en" ? "Men" : ""}
+                                {selectLan == "ru" ? "Люди" : ""}
+
+                            </li>
+                            <li>
+                                {selectLan == "uz" ? "Ayollar" : ""}
+                                {selectLan == "en" ? "Women" : ""}
+                                {selectLan == "ru" ? "Женщины" : ""}
+                            </li>
+                            <li>
+                                {selectLan == "uz" ? "Ko’ylaklar" : ""}
+                                {selectLan == "en" ? "Dresses" : ""}
+                                {selectLan == "ru" ? "Платья" : ""}
+
+                            </li>
+                            <li>
+                                {selectLan == "uz" ? "Koftalar" : ""}
+                                {selectLan == "en" ? "Blouses" : ""}
+                                {selectLan == "ru" ? "Блузки" : ""}
+                            </li>
+                            <li>
+                                {selectLan == "uz" ? "Shimlar" : ""}
+                                {selectLan == "en" ? "Pants" : ""}
+                                {selectLan == "ru" ? "Брюки" : ""}
+
+                            </li>
+                            <li>
+                                {selectLan == "uz" ? "Bolalar" : ""}
+                                {selectLan == "en" ? "Children" : ""}
+                                {selectLan == "ru" ? "Дети" : ""}
+                            </li>
                         </ul>
                     </div>
                     <div className="grid">
-                        <h1>Biz Bilan Bog’lanish</h1>
-                        <p>
-                            Toshkent Shahar, O’zbekiston
+                        <h1 style={dark ? { color: "#ccc" } : {}}>
+                            {selectLan == "uz" ? "Biz Bilan Bog’lanish" : ""}
+                            {selectLan == "en" ? "Contact us" : ""}
+                            {selectLan == "ru" ? "Связаться с нами" : ""}
+
+                        </h1>
+                        <p style={dark ? { color: "#ccc" } : {}}>
+                            {selectLan == "uz" ? "Toshkent shahar Yunusobod tuman 4 kvartal 87 yu" : ""}
+                            {selectLan == "en" ? "Tashkent city Yunusabad district 4 quarter 87" : ""}
+                            {selectLan == "ru" ? "город Ташкент Юнусабадский район 4 квартал 87" : ""}
+                            <br />
                             +998 94 364 57 77
                             <br />
                             +998 97 303 19 09
@@ -140,7 +186,7 @@ const Footer: React.FC<AndozalarProps> = (
                         </p>
                     </div>
                 </div>
-                <div className="footer-bottom flex-class">
+                <div className="footer-bottom flex-class" style={dark ? { backgroundColor: "#121212" } : {}}>
                     <p>©️ Asadov Elbotir - All rights reserved</p>
                     <ul className="flex-class">
                         <li>Terms & Condition </li>

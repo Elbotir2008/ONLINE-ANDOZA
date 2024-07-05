@@ -1,19 +1,23 @@
 import "./category.scss"
-import { Dispatch, SetStateAction } from "react"
 
 interface AndozalarProps {
   dark: boolean;
-  setDark: Dispatch<SetStateAction<boolean>>;
   selectLan: string;
-  setSelectLan: Dispatch<SetStateAction<string>>;
 }
 const Category: React.FC<AndozalarProps> = (
-  // { dark, setDark, selectLan, setSelectLan }
+  {
+    dark,
+    selectLan
+  }
 ) => {
   return (
     <section className="category-section" id="category">
       <div className="container">
-        <h1>KATEGORIYALAR</h1>
+        <h1 style={dark ? { color: "#E0E0E0" } : {}}>
+          {selectLan == "uz" ? "KATEGORIYALAR" : ""}
+          {selectLan == "en" ? "CATEGORIES" : ""}
+          {selectLan == "ru" ? "КАТЕГОРИИ" : ""}
+        </h1>
         <div className="category-cards flex-class">
           <div className="category-card">
             <div className="innerCard">
@@ -21,7 +25,11 @@ const Category: React.FC<AndozalarProps> = (
                 <img src="./personImg1.svg" alt="Error" />
               </div>
               <div className="backSide">
-                <p className="title">ERKAKLAR BO'LIMI</p>
+                <p className="title">
+                  {selectLan == "uz" ? "ERKAKLAR BO'LIMI" : ""}
+                  {selectLan == "en" ? "MEN'S SECTION " : ""}
+                  {selectLan == "ru" ? "МУЖСКАЯ СЕКЦИЯ" : ""}
+                </p>
               </div>
             </div>
           </div>
@@ -31,7 +39,11 @@ const Category: React.FC<AndozalarProps> = (
                 <img src="./personImg2.svg" alt="Error" />
               </div>
               <div className="backSide">
-                <p className="title">AYOLLAR BO'LIMI</p>
+                <p className="title">
+                  {selectLan == "uz" ? "AYOLLAR BO'LIMI" : ""}
+                  {selectLan == "en" ? "WOMEN'S SECTION" : ""}
+                  {selectLan == "ru" ? "ЖЕНСКАЯ СЕКЦИЯ" : ""}
+                </p>
               </div>
             </div>
           </div>
@@ -41,7 +53,11 @@ const Category: React.FC<AndozalarProps> = (
                 <img src="./personImg3.svg" alt="Error" />
               </div>
               <div className="backSide">
-                <p className="title">BOLALAR BO'LIMI</p>
+                <p className="title">
+                  {selectLan == "uz" ? "BOLALAR BO'LIMI" : ""}
+                  {selectLan == "en" ? "CHILDREN'S DEPARTMENT" : ""}
+                  {selectLan == "ru" ? "ДЕТСКИЙ ОТДЕЛЕНИЕ" : ""}
+                </p>
               </div>
             </div>
           </div>

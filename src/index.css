@@ -15,6 +15,17 @@ html {
     /* overflow-x: hidden; */
     font-family: "David Libre", sans-serif;
 }
+body {
+    scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
+    scrollbar-width: thin; /* thin scrollbar */
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+body.dark-mode a {
+    color: #e0e0e0;
+}
 .container {
     max-width: 1650px;
     margin: 0 auto;
@@ -23,7 +34,11 @@ html {
 main {
     /* margin-left: -4rem;
     width: 107%; */
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
+}
+main.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 li {
     list-style: none;
@@ -51,4 +66,17 @@ button {
 }
 .dsp_none {
     display: none;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #732f3c;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

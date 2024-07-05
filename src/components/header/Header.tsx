@@ -1,6 +1,5 @@
-"use client"
-import { useState } from "react";
-import "./header.scss"
+import { useState, useEffect } from "react";
+import "./header.scss";
 import React, { Dispatch, SetStateAction } from 'react';
 
 interface HeaderProps {
@@ -9,13 +8,30 @@ interface HeaderProps {
   selectLan: string;
   setSelectLan: Dispatch<SetStateAction<string>>;
 }
-const Header: React.FC<HeaderProps> = (
-  // { dark, setDark, selectLan, setSelectLan }
-) => {
+
+const Header: React.FC<HeaderProps> = ({
+  dark, setDark,
+  selectLan, setSelectLan
+}) => {
   const [changeColor1, setChangeColor1] = useState(false);
   const [changeColor2, setChangeColor2] = useState(false);
   const [changeColor3, setChangeColor3] = useState(false);
   const [changeColor4, setChangeColor4] = useState(false);
+  const [isShrunk, setIsShrunk] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsShrunk(true);
+      } else {
+        setIsShrunk(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleLinkClick = (setColor1: boolean, setColor2: boolean, setColor3: boolean, setColor4: boolean) => {
     setChangeColor1(setColor1);
@@ -24,87 +40,107 @@ const Header: React.FC<HeaderProps> = (
     setChangeColor4(setColor4);
   };
   return (
-    <header>
-      <div className="container">
+    <header className={isShrunk ? "shrink" : ""} style={dark ? { backgroundColor: "#121212" } : {}}>
+      <div className="container" >
         <nav className="flex-class">
           <div className="nav-links">
             <ul className="flex-class">
-              <img src="./logo.png" alt="Error" onClick={() => location.reload()} />
+              {selectLan == "uz" ? <img src="./logouz.png" alt="Error" onClick={() => location.reload()} /> : ""}
+              {selectLan == "en" ? <img src="./logoen.png" style={{ marginLeft: "-8 rem", marginTop: "-4rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
+              {selectLan == "ru" ? <img src="./logoru.png" style={{ width: "25rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
               <li style={
                 changeColor1
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#home"
+              }><a href="#home" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(true, false, false, false)}
-              >ASOSIY SAHIFA</a>
+              >
+                  {selectLan == "uz" ? "ASOSIY SAHIFA" : ""}
+                  {selectLan == "en" ? "MAIN PAGE" : ""}
+                  {selectLan == "ru" ? "ГЛАВНАЯ СТРАНИЦА" : ""}
+                </a>
               </li>
 
               <li style={
                 changeColor2
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#andozalar"
+              }><a href="#andozalar" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(false, true, false, false)}
-              >ANDOZALAR</a>
+              >
+                  {selectLan == "uz" ? "ANDOZALAR" : ""}
+                  {selectLan == "en" ? "TEMPLATES" : ""}
+                  {selectLan == "ru" ? "ШАБЛОНЫ" : ""}
+                </a>
               </li>
 
               <li style={
                 changeColor3
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#about"
+              }><a href="#about" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(false, false, true, false)}
-              >FIRMA HAQIDA</a>
+              >
+                  {selectLan == "uz" ? "FIRMA HAQIDA" : ""}
+                  {selectLan == "en" ? "ABOUT THE COMPANY" : ""}
+                  {selectLan == "ru" ? "О КОМПАНИИ" : ""}
+                </a>
               </li>
 
               <li style={
                 changeColor4
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#contact"
+              }><a href="#contact" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(false, false, false, true)}
-              >BIZ BILAN BOG’LANING</a>
+              >
+                  {selectLan == "uz" ? "BIZ BILAN BOG’LANING" : ""}
+                  {selectLan == "en" ? "CONTACT US" : ""}
+                  {selectLan == "ru" ? "О СВЯЗАТЬСЯ С НАМИ" : ""}
+                </a>
               </li>
             </ul>
           </div>
           <div className="nav-btns flex-class">
-            <label className="switch">
-              <input type="checkbox" />
-              <div className="slider">
-                <span>Dark</span>
-                <span>Light</span>
+            <form onChange={(e: any) => setDark(e.target.checked)}>
+              <label className="switch">
+                <input type="checkbox" />
+                <div className="slider">
+                  <span style={{ fontSize: "1.1rem" }}>
+                    {selectLan == "uz" ? "Qora" : ""}
+                    {selectLan == "en" ? "Dark" : ""}
+                    {selectLan == "ru" ? "Черный" : ""}
+                  </span>
+                  <span style={{ fontSize: "1.1rem" }}>
+                    {selectLan == "uz" ? "Oq" : ""}
+                    {selectLan == "en" ? "Light" : ""}
+                    {selectLan == "ru" ? "Белый" : ""}
+                  </span>
+                </div>
+              </label>
+            </form>
+            <form className="flex-class" onChange={(e: any) => setSelectLan(e.target.id)}>
+              <div className="radio-inputs" style={dark ? { height: "3.2rem" } : {}}>
+                <label className="radio">
+                  <input type="radio" name="radio" id="uz" defaultChecked />
+                  <span className="name">UZBEK</span>
+                </label>
+                <label className="radio">
+                  <input type="radio" name="radio" id="ru" />
+                  <span className="name">RUSSIA</span>
+                </label>
+
+                <label className="radio">
+                  <input type="radio" name="radio" id="en" />
+                  <span className="name">ENGLISH</span>
+                </label>
               </div>
-            </label>
-            <div className="radio-inputs">
-              <label className="radio">
-                <input type="radio" name="radio" />
-                <span className="name">UZBEK</span>
-              </label>
-              <label className="radio">
-                <input type="radio" name="radio" />
-                <span className="name">RUSSIA</span>
-              </label>
-
-              <label className="radio">
-                <input type="radio" name="radio" />
-                <span className="name">ENGLISH</span>
-              </label>
-            </div>
-
-            {/* <div className="search flex-class">
-              <label htmlFor="search">
-                <img src="./search.svg" alt="Error" />
-              </label>
-              <input type="text" id="search" placeholder="Izlash..." />
-            </div> */}
-            {/* <img src="./sunset.svg" alt="Error" /> */}
-            {/* <img src="./Filter.svg" alt="Error" /> */}
-            {/* <img src="./profile.svg" alt="Error" /> */}
+            </form>
           </div>
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

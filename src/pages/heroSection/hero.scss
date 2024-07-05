@@ -1,21 +1,32 @@
 .hero-section {
   width: 100%;
-  margin-top: 10rem;
+  margin-top: 7rem;
   padding: 5rem;
+
   .hero-flex {
     gap: 15rem;
     margin-top: 10rem;
+
     h1 {
       font-size: 6rem;
       color: #732f3c;
       width: 50rem;
     }
+
     p {
       line-height: 2.8rem;
       width: 50rem;
       color: #f5a59a;
       margin-top: 5rem;
       font-size: 2rem;
+    }
+
+    .hero-texts {
+      a:first-of-type button {
+        background-color: #732f3c;
+        color: #fff;
+        margin-left: -.5rem;
+      }
     }
     button {
       color: #fff;
@@ -26,11 +37,13 @@
       width: 25rem;
       padding: 1.5rem 3rem;
       margin-top: 6rem;
+
       &:last-child {
         color: #732f3c;
         background-color: #e8e8e8;
         margin-left: 3rem;
         transition: 0.1s linear;
+
         &:hover {
           background-color: #732f3c;
           border: 1px solid #732f3c;
@@ -39,6 +52,7 @@
         }
       }
     }
+
     img {
       margin-top: -5rem;
       margin-left: 25rem;

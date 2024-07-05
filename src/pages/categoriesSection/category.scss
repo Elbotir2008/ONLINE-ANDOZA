@@ -13,13 +13,18 @@
   }
   .category-cards {
     gap: 12rem;
+    margin-top: 15rem;
     .category-card {
       background-color: transparent;
       width: 45rem;
       height: 60rem;
       perspective: 1000px;
     }
-
+    img {
+      margin-top: -4rem;
+      width: 55rem;
+      height: 68rem;
+    }
     .title {
       font-size: 1.5em;
       font-weight: 900;
@@ -53,7 +58,7 @@
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       border: 1px solid rgba(255, 255, 255, 0.8);
-      border-radius: 1rem;
+      border-radius: 4rem;
       color: white;
       box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
       font-weight: 700;
@@ -78,7 +83,7 @@
       height: 110%;
       position: absolute;
       z-index: -1;
-      border-radius: 1em;
+      border-radius: 4rem;
       filter: blur(20px);
       animation: animate 5s linear infinite;
     }

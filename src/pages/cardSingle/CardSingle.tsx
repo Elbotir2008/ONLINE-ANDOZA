@@ -12,6 +12,7 @@ const CardSingle: React.FC<HeaderProps> = (
   ) => {
   return (
     <div>
+      Card Single
     </div>
   )
 }

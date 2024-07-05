@@ -7,6 +7,11 @@ header {
   z-index: 10;
   background-color: #f1f1f1;
   padding: 5rem;
+  transition: .2s linear;
+  &.shrink {
+    transition: .2s linear;
+    padding: 3rem;
+  }
   nav {
     justify-content: space-between;
     .nav-links {
@@ -59,7 +64,7 @@ header {
 
       /* The switch - the box around the slider */
       .switch {
-        font-size: 17px;
+        font-size: 1.7rem;
         position: relative;
         display: inline-block;
         width: 100px;

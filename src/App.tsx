@@ -57,12 +57,10 @@ function App() {
             <AboutUs dark={dark} selectLan={selectLan} />
           </>
         } />
-        <Route path="/cardSingle" element={
+        <Route path="/cardSingle/:id" element={
           <CardSingle
             dark={dark}
-            setDark={setDark}
             selectLan={selectLan}
-            setSelectLan={setSelectLan}
           />
         } />
       </Routes>

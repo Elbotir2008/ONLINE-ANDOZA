@@ -20,7 +20,7 @@ const Andozalar: React.FC<AndozalarProps> = (
       let res = await axios.get("https://654ea70d358230d8f0ccbf59.mockapi.io/api/v1/ForweApi")
       let data = await res.data
       setAndozaArr(data)
-      console.log(data)
+      // console.log(data)
     } catch (error) {
       console.log(error)
     }
@@ -109,8 +109,8 @@ const Andozalar: React.FC<AndozalarProps> = (
           </div>
         </div>
         <div className="andoza-cards grid-class">
-          {andozaArr.map((andoza: any, index: any) => (
-            <Link to={"/cardSingle"} key={index}>
+          {andozaArr.map((andoza: any) => (
+            <Link to={`/cardSingle/${andoza.id}`} key={andoza.id}>
               <div className="andoza-card" style={dark ? { boxShadow: "none" } : {}}>
                 <img src={andoza.image} alt="Error" />
               </div>

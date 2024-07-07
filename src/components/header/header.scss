@@ -7,13 +7,17 @@ header {
   z-index: 10;
   background-color: #f1f1f1;
   padding: 5rem;
-  transition: .2s linear;
+  transition: 0.2s linear;
   &.shrink {
-    transition: .2s linear;
+    transition: 0.2s linear;
     padding: 3rem;
+    @media (max-width: 1194px) {
+      padding: 4rem;
+    }
   }
   nav {
     justify-content: space-between;
+    align-items: center;
     .nav-links {
       img {
         cursor: pointer;
@@ -24,6 +28,9 @@ header {
       ul {
         margin-left: -5rem;
         gap: 4rem;
+        @media (max-width: 840px) {
+          margin-left: -5rem !important;
+        }
         li {
           font-size: 1.5rem;
           a {
@@ -87,6 +94,9 @@ header {
         justify-content: space-around;
         align-items: center;
         transition: 0.4s;
+        @media (max-width: 1194px) {
+          width: 8rem;
+        }
       }
 
       .slider:before {
@@ -152,6 +162,12 @@ header {
         width: 300px;
         height: 4rem;
         font-size: 14px;
+        @media (max-width: 1194px) {
+          width: 10rem;
+          display: grid;
+          grid-template-columns: auto;
+          margin-top: -3rem;
+        }
       }
 
       .radio-inputs .radio {
@@ -184,5 +200,143 @@ header {
         cursor: pointer;
       }
     }
+  }
+
+  #checkbox {
+    display: none;
+  }
+
+  .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: 0.5s;
+    margin-left: 26rem;
+    margin-top: -6rem;
+  }
+
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: #732f3c;
+    border-radius: 4px;
+  }
+
+  #bar2 {
+    transition-duration: 0.8s;
+  }
+
+  #bar1,
+  #bar3 {
+    width: 70%;
+  }
+
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle {
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 1240px) {
+    img {
+      display: none;
+    }
+    ul {
+      margin-left: 2rem !important;
+    }
+  }
+  @media (max-width: 1194px) {
+    img {
+      display: none;
+    }
+    ul {
+      width: 60rem;
+      li {
+        font-weight: 700;
+        font-size: 1.4rem !important;
+      }
+    }
+    .nav-btns {
+      display: grid;
+      grid-template-columns: auto auto;
+      .switch {
+        margin-left: 50rem;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  header {
+    background-color: #fff;
+    width: 100%;
+    nav {
+      ul {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s linear;
+      }
+      .nav-btns {
+        .radio-inputs {
+          display: none;
+        }
+        .slider {
+          margin-left: -55rem;
+          span {
+            font-size: 0.8rem !important;
+          }
+        }
+        .toggle {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.open {
+  transition: 0.2s linear;
+  opacity: 1;
+  margin-left: -0.1rem !important;
+  visibility: visible;
+  flex-direction: column;
+  padding: 3rem;
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  top: 7rem;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  display: none;
+}
+.darkMenu {
+  a {
+    color: #000 !important;
   }
 }

@@ -108,19 +108,25 @@ const Footer: React.FC<AndozalarProps> = (
                         </h1>
                         <ul style={dark ? { color: "#ccc" } : {}}>
                             <li >
-                                {selectLan == "uz" ? "Yordam & Support" : ""}
-                                {selectLan == "en" ? "Help & Support" : ""}
-                                {selectLan == "ru" ? "Помощь и поддержка" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Yordam & Support" : ""}
+                                    {selectLan == "en" ? "Help & Support" : ""}
+                                    {selectLan == "ru" ? "Помощь и поддержка" : ""}
+                                </a>
                             </li>
                             <li>
-                                {selectLan == "uz" ? "Andozalar" : ""}
-                                {selectLan == "en" ? "Templates" : ""}
-                                {selectLan == "ru" ? "Шаблоны" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Andozalar" : ""}
+                                    {selectLan == "en" ? "Templates" : ""}
+                                    {selectLan == "ru" ? "Шаблоны" : ""}
+                                </a>
                             </li>
                             <li>
-                                {selectLan == "uz" ? "Narxlar" : ""}
-                                {selectLan == "en" ? "Prices" : ""}
-                                {selectLan == "ru" ? "Цены" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Narxlar" : ""}
+                                    {selectLan == "en" ? "Prices" : ""}
+                                    {selectLan == "ru" ? "Цены" : ""}
+                                </a>
                             </li>
                             <li>FAQ</li>
                         </ul>
@@ -133,37 +139,49 @@ const Footer: React.FC<AndozalarProps> = (
                         </h1>
                         <ul style={dark ? { color: "#ccc" } : {}}>
                             <li>
-                                {selectLan == "uz" ? "Erkaklar" : ""}
-                                {selectLan == "en" ? "Men" : ""}
-                                {selectLan == "ru" ? "Люди" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Erkaklar" : ""}
+                                    {selectLan == "en" ? "Men" : ""}
+                                    {selectLan == "ru" ? "Люди" : ""}
+                                </a>
 
                             </li>
                             <li>
-                                {selectLan == "uz" ? "Ayollar" : ""}
-                                {selectLan == "en" ? "Women" : ""}
-                                {selectLan == "ru" ? "Женщины" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Ayollar" : ""}
+                                    {selectLan == "en" ? "Women" : ""}
+                                    {selectLan == "ru" ? "Женщины" : ""}
+                                </a>
                             </li>
                             <li>
-                                {selectLan == "uz" ? "Ko’ylaklar" : ""}
-                                {selectLan == "en" ? "Dresses" : ""}
-                                {selectLan == "ru" ? "Платья" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Ko’ylaklar" : ""}
+                                    {selectLan == "en" ? "Dresses" : ""}
+                                    {selectLan == "ru" ? "Платья" : ""}
+                                </a>
 
                             </li>
                             <li>
-                                {selectLan == "uz" ? "Koftalar" : ""}
-                                {selectLan == "en" ? "Blouses" : ""}
-                                {selectLan == "ru" ? "Блузки" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Koftalar" : ""}
+                                    {selectLan == "en" ? "Blouses" : ""}
+                                    {selectLan == "ru" ? "Блузки" : ""}
+                                </a>
                             </li>
                             <li>
-                                {selectLan == "uz" ? "Shimlar" : ""}
-                                {selectLan == "en" ? "Pants" : ""}
-                                {selectLan == "ru" ? "Брюки" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Shimlar" : ""}
+                                    {selectLan == "en" ? "Pants" : ""}
+                                    {selectLan == "ru" ? "Брюки" : ""}
+                                </a>
 
                             </li>
                             <li>
-                                {selectLan == "uz" ? "Bolalar" : ""}
-                                {selectLan == "en" ? "Children" : ""}
-                                {selectLan == "ru" ? "Дети" : ""}
+                                <a href="#">
+                                    {selectLan == "uz" ? "Bolalar" : ""}
+                                    {selectLan == "en" ? "Children" : ""}
+                                    {selectLan == "ru" ? "Дети" : ""}
+                                </a>
                             </li>
                         </ul>
                     </div>

@@ -15,11 +15,23 @@
     margin-left: 10rem;
     margin-top: 10rem;
     margin-bottom: 10rem;
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+    }
+    img {
+      @media (max-width: 480px) {
+        width: 37rem;
+        margin-left: -10rem;
+      }
+    }
     .about-texts {
       margin-left: 10rem;
+      @media (max-width: 480px) {
+        text-align: center;
+      }
       span {
         font-size: 2rem;
-        color: #D93728;
+        color: #d93728;
         font-weight: 700;
       }
       h2 {
@@ -28,13 +40,24 @@
         font-size: 4rem;
         color: #732f3c;
         font-weight: 700;
+        @media (max-width: 1240px) {
+          width: 55rem;
+        }  
+        @media (max-width: 480px) {
+          margin-left: -29rem;
+        }  
       }
       p {
         line-height: 2.8rem;
         width: 45rem;
-        color: #732F3C;
+        color: #732f3c;
         margin-top: 2rem;
         font-size: 2rem;
+        @media (max-width: 480px) {
+          text-align: center;
+          width: 40rem;
+          margin-left: -21rem;
+        }  
       }
       button {
         margin-top: 4rem;
@@ -43,6 +66,10 @@
         background-color: #732f3c;
         font-size: 1.7rem;
         color: #fff;
+        @media (max-width: 480px) {
+          text-align: center;
+          margin-left: -29rem;
+        }  
       }
     }
   }

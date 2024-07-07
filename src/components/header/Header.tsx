@@ -18,6 +18,7 @@ const Header: React.FC<HeaderProps> = ({
   const [changeColor3, setChangeColor3] = useState(false);
   const [changeColor4, setChangeColor4] = useState(false);
   const [isShrunk, setIsShrunk] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,20 +40,23 @@ const Header: React.FC<HeaderProps> = ({
     setChangeColor3(setColor3);
     setChangeColor4(setColor4);
   };
+  // console.log(menuOpen)
+  // console.log(dark)
+
   return (
     <header className={isShrunk ? "shrink" : ""} style={dark ? { backgroundColor: "#121212" } : {}}>
       <div className="container" >
         <nav className="flex-class">
           <div className="nav-links">
-            <ul className="flex-class">
-              {selectLan == "uz" ? <img src="./logouz.png" alt="Error" onClick={() => location.reload()} /> : ""}
-              {selectLan == "en" ? <img src="./logoen.png" style={{ marginLeft: "-8 rem", marginTop: "-4rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
-              {selectLan == "ru" ? <img src="./logoru.png" style={{ width: "25rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
+            <ul className={`flex-class ${menuOpen ? 'open' : ''}`}>
+              {selectLan == "uz" ? <img src="/logouz.png" alt="Error" onClick={() => location.reload()} /> : ""}
+              {selectLan == "en" ? <img src="/logoen.png" style={{ marginLeft: "-8 rem", marginTop: "-4rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
+              {selectLan == "ru" ? <img src="/logoru.png" style={{ width: "25rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
               <li style={
                 changeColor1
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#home" style={dark ? { color: "#E0E0E0" } : {}}
+              }><a href="/#home" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(true, false, false, false)}
               >
                   {selectLan == "uz" ? "ASOSIY SAHIFA" : ""}
@@ -65,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({
                 changeColor2
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#andozalar" style={dark ? { color: "#E0E0E0" } : {}}
+              }><a href="/#andozalar" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(false, true, false, false)}
               >
                   {selectLan == "uz" ? "ANDOZALAR" : ""}
@@ -78,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({
                 changeColor3
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#about" style={dark ? { color: "#E0E0E0" } : {}}
+              }><a href="/#about" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(false, false, true, false)}
               >
                   {selectLan == "uz" ? "FIRMA HAQIDA" : ""}
@@ -91,7 +95,7 @@ const Header: React.FC<HeaderProps> = ({
                 changeColor4
                   ? { textDecoration: "underline" }
                   : {}
-              }><a href="#contact" style={dark ? { color: "#E0E0E0" } : {}}
+              }><a href="/#contact" style={dark ? { color: "#E0E0E0" } : {}}
                 onClick={() => handleLinkClick(false, false, false, true)}
               >
                   {selectLan == "uz" ? "BIZ BILAN BOG’LANING" : ""}
@@ -136,6 +140,12 @@ const Header: React.FC<HeaderProps> = ({
                 </label>
               </div>
             </form>
+            <input type="checkbox" id="checkbox" onChange={() => setMenuOpen(!menuOpen)} />
+            <label htmlFor="checkbox" className="toggle">
+              <div className="bars" id="bar1"></div>
+              <div className="bars" id="bar2"></div>
+              <div className="bars" id="bar3"></div>
+            </label>
           </div>
         </nav>
       </div>

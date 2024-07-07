@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = (
               {selectLan == "en" ? "CONTACT US" : ""}
               {selectLan == "ru" ? "СВЯЗАТЬСЯ С НАМИ" : ""}
             </button></a>
-            <a href="#about"><button>
+            <a href="#about" className="aboutBtn"><button>
               {selectLan == "uz" ? "BIZ HAQIMIZDA" : ""}
               {selectLan == "en" ? "ABOUT US" : ""}
               {selectLan == "ru" ? "О НАС" : ""}

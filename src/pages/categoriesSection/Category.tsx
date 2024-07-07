@@ -18,7 +18,7 @@ const Category: React.FC<AndozalarProps> = (
           {selectLan == "en" ? "CATEGORIES" : ""}
           {selectLan == "ru" ? "КАТЕГОРИИ" : ""}
         </h1>
-        <div className="category-cards flex-class">
+        <div className="category-cards grid-class">
           <div className="category-card">
             <div className="innerCard">
               <div className="frontSide">

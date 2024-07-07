@@ -11,6 +11,10 @@
       font-size: 6rem;
       color: #732f3c;
       width: 50rem;
+      @media (max-width: 1194px) {
+        font-size: 5rem;
+        width: 30rem;
+      }
     }
 
     p {
@@ -19,13 +23,20 @@
       color: #f5a59a;
       margin-top: 5rem;
       font-size: 2rem;
+      @media (max-width: 1194px) {
+        font-size: 2rem;
+        width: 30rem;
+      }
     }
 
     .hero-texts {
+      @media (max-width: 840px) {
+        width: 1rem !important;
+      }      
       a:first-of-type button {
         background-color: #732f3c;
         color: #fff;
-        margin-left: -.5rem;
+        margin-left: -0.5rem;
       }
     }
     button {
@@ -43,7 +54,6 @@
         background-color: #e8e8e8;
         margin-left: 3rem;
         transition: 0.1s linear;
-
         &:hover {
           background-color: #732f3c;
           border: 1px solid #732f3c;
@@ -57,10 +67,29 @@
       margin-top: -5rem;
       margin-left: 25rem;
       filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4));
+      @media (max-width: 480px) {
+        width: 33rem;
+        margin-left: 1rem !important;
+      }
+      @media (max-width: 890px) {
+        width: 30rem;
+        margin-left: -10rem !important;
+      }      
     }
   }
 }
 
+@media (max-width: 840px) {
+  .aboutBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutBtn {
+    display: none;
+  }
+}
 button {
   position: relative;
   border: 1px solid #732f3c;
@@ -120,4 +149,23 @@ button:active {
   -webkit-transition: box-shadow 0.2s ease-in;
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
+}
+
+@media (max-width: 1240px) {
+  .hero-flex {
+    img {
+      margin-left: -2rem !important;
+      width: 40rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    .hero-flex {
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }

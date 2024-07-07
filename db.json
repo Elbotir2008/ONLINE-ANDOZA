@@ -1,0 +1,154 @@
+[
+  {
+    "id": "1",
+    "title": "Ideal ayol, ideal kiyim",
+    "price": "75$",
+    "category": "girls",
+    "description": "Yorqin tabassum bilan zamonaviy kiyimdagi oqlangan ayol.",
+    "image": "/card1.svg"
+  },
+  {
+    "id": "2",
+    "title": "Ishonchli Erkakdagi kiyim",
+    "price": "35$",
+    "category": "man",
+    "description": "Ish kostyumidagi ishonchli erkak, muvaffaqiyatga tayyor.",
+    "image": "/card2.svg"
+  },
+  {
+    "id": "3",
+    "title": "Quvnoq ayoldagi maftunkor kiyim",
+    "price`": "95$",
+    "category": "man",
+    "description": "Maftunkor ayol parkda quyoshli kundan zavqlanmoqda.",
+    "image": "/card3.svg"
+  },
+  {
+    "id": "4",
+    "title": "Yosh erkakning stili",
+    "price": "125$",
+    "category": "girls",
+    "description": "Kundalik kiyimdagi, tabiiy go'zallikni namoyon etuvchi yosh erkak.",
+    "image": "/card4.svg"
+  },
+  {
+    "id": "5",
+    "title": "Maxsus Voqea Uchun libos",
+    "price": "175$",
+    "category": "girls",
+    "description": "Maftunkor libosdagi ayol, maxsus voqea uchun juda mos keladi.",
+    "image": "/card5.svg"
+  },
+  {
+    "id": "6",
+    "title": "Kulgu Tarqatadigan Baxtli Ayol libosi",
+    "price": "115$",
+    "category": "girls",
+    "description": "Yuqumli kulgili, quvonchni tarqatadigan baxtli ayol.",
+    "image": "/card6.svg"
+  },
+  {
+    "id": "7",
+    "title": "Jonli Kiyimdagi Bola",
+    "price": "205$",
+    "category": "girls",
+    "description": "Yuqumli kulgili, quvonchni tarqatadigan baxtli ayol.",
+    "image": "/card7.svg"
+  },
+  {
+    "id": "8",
+    "title": "Jonli Kiyimdagi Bola",
+    "price": "155$",
+    "category": "boys",
+    "description": "Jonli kiyimdagi bola, jonli shaxsni namoyish etadi.",
+    "image": "/card8.svg"
+  },
+  {
+    "id": "9",
+    "title": "Kechki Libosdagi ayol",
+    "price": "195$",
+    "category": "girls",
+    "description": "Kechki libosda nafis ayol.",
+    "image": "/card9.svg"
+  }
+]
+
+
+
+
+
+
+[
+  {
+    "id": "1",
+    "title": "The ideal woman, the ideal outfit",
+    "price": "$75",
+    "category": "girls",
+    "description": "Elegant woman in stylish clothes with a bright smile.",
+    "image": "/card1.svg"
+  },
+  {
+    "id": "2",
+    "title": "Clothes in the Confident Man",
+    "price": "$35",
+    "category": "man",
+    "description": "A confident man in a business suit, ready for success.",
+    "image": "/card2.svg"
+  },
+  {
+    "id": "3",
+    "title": "Charming outfit on a cheerful woman",
+    "price`": "$95",
+    "category": "man",
+    "description": "Charming woman enjoying a sunny day in the park.",
+    "image": "/card3.svg"
+  },
+  {
+    "id": "4",
+    "title": "Young Man's Style",
+    "price": "$125",
+    "category": "girls",
+    "description": "Young man in casual clothes, showing natural beauty.",
+    "image": "/card4.svg"
+  },
+  {
+    "id": "5",
+    "title": "Special Occasion Dress",
+    "price": "$175",
+    "category": "girls",
+    "description": "A woman in a glamorous dress, perfect for a special occasion.",
+    "image": "/card5.svg"
+  },
+  {
+    "id": "6",
+    "title": "Laughing Happy Woman Dress",
+    "price": "$115",
+    "category": "girls",
+    "description": "A happy woman with an infectious laugh, spreading joy.",
+    "image": "/card6.svg"
+  },
+  {
+    "id": "7",
+    "title": "Child in a Dress",
+    "price": "$205",
+    "category": "girls",
+    "description": "A happy woman with an infectious laugh, spreading joy.",
+    "image": "/card7.svg"
+  },
+  {
+    "id": "8",
+    "title": "Child in a Dress",
+    "price": "$155",
+    "category": "boys",
+    "description": "A boy in a lively outfit, showing a lively personality.",
+    "image": "/card8.svg"
+  },
+  {
+    "id": "9",
+    "title": "Woman in Evening Dress",
+    "price": "$195",
+    "category": "girls",
+    "description": "Elegant woman in evening dress.",
+    "image": "/card9.svg"
+  }
+]

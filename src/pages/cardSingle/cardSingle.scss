@@ -1,0 +1,78 @@
+.cardSingle {
+  margin-top: 10rem;
+  padding: 5rem 25rem;
+  .flex-class {
+    gap: 15rem;
+    img {
+      width: 45rem;
+    }
+    .singleTexts {
+      margin-top: 8rem;
+      width: 50rem;
+      * {
+        margin-top: 5rem;
+      }
+      h1 {
+        background-color: #732f3c;
+        width: 10rem;
+        color: #fff;
+        padding: 1rem 8rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        font-size: 5rem;
+      }
+      h2,
+      h3,
+      p {
+        color: #732f3c;
+        font-weight: 700;
+        font-size: 2.7rem;
+        span {
+          display: inline;
+          color: #3d3d3d;
+        }
+      }
+      button {
+        font-weight: 700;
+        padding: 1rem 10rem;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modal-content {
+    width: 60rem;
+    height: 40rem;
+    background-color: #fff;
+    opacity: .5;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: right;
+    align-items: start;
+    padding: 4rem;
+    svg {
+      width: 5rem;
+      cursor: pointer;
+    }
+    .modalText {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5rem;
+        color: #732f3c;
+    }
+  }
+}

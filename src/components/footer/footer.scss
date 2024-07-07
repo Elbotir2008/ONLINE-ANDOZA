@@ -8,11 +8,28 @@ footer {
     grid-template-columns: auto auto auto auto;
     .grid {
       color: #732f3c;
+      @media (max-width: 480px) {
+        text-align: center;
+        margin-left: -29rem;
+      }
+      @media (max-width: 480px) {
+        display: none;
+        &:nth-child(1) {
+          text-align: center;
+          display: inline-block;
+          margin-left: 0rem;
+        }
+      }
       ul {
         li {
           cursor: pointer;
           margin-top: 1rem;
           font-size: 1.5rem;
+          a {
+            &:hover {
+              text-decoration: underline !important;
+            }
+          }
         }
       }
       &:nth-child(1) {
@@ -47,8 +64,18 @@ footer {
     padding: 4rem;
     margin-top: 8rem;
     justify-content: space-between;
+    @media (max-width: 1240px) {
+      width: 135rem;
+      padding-left: 10rem;
+    }
+    @media (max-width: 480px) {
+      width: 50rem;
+    }
     p {
       font-size: 1.8rem;
+      @media (max-width: 480px) {
+        margin-bottom: 1rem;
+      }
     }
     ul {
       gap: 2rem;
@@ -131,7 +158,7 @@ ul {
 
 .example-2 .icon-content a[data-social="linkedin"] .filled,
 .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-  background-color: #32A7E2;
+  background-color: #32a7e2;
 }
 
 .example-2 .icon-content a[data-social="github"] .filled,

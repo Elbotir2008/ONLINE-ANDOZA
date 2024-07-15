@@ -21,13 +21,13 @@ const Category: React.FC<AndozalarProps> = (
         <div className="category-cards grid-class">
           <div className="category-card">
             <div className="innerCard">
-              <div className="frontSide">
+              <div className="frontSide" style={dark ? {boxShadow: "none"} : {}}>
                 <img src="./personImg1.svg" alt="Error" />
               </div>
-              <div className="backSide">
+              <div className="backSide" style={dark ? {boxShadow: "none"} : {}}>
                 <p className="title">
                   {selectLan == "uz" ? "ERKAKLAR BO'LIMI" : ""}
-                  {selectLan == "en" ? "MEN'S SECTION " : ""}
+                  {selectLan == "en" ? "MEN'S SECTION " : ""} 
                   {selectLan == "ru" ? "МУЖСКАЯ СЕКЦИЯ" : ""}
                 </p>
               </div>
@@ -35,10 +35,10 @@ const Category: React.FC<AndozalarProps> = (
           </div>
           <div className="category-card">
             <div className="innerCard">
-              <div className="frontSide">
+              <div className="frontSide" style={dark ? {boxShadow: "none"} : {}}>
                 <img src="./personImg2.svg" alt="Error" />
               </div>
-              <div className="backSide">
+              <div className="backSide" style={dark ? {boxShadow: "none"} : {}}>
                 <p className="title">
                   {selectLan == "uz" ? "AYOLLAR BO'LIMI" : ""}
                   {selectLan == "en" ? "WOMEN'S SECTION" : ""}
@@ -49,10 +49,10 @@ const Category: React.FC<AndozalarProps> = (
           </div>
           <div className="category-card">
             <div className="innerCard">
-              <div className="frontSide">
-                <img src="./personImg3.svg" alt="Error" />
+              <div className="frontSide" style={dark ? {boxShadow: "none"} : {}}>
+                <img src="./personImg3.svg" className="personImg3" alt="Error" />
               </div>
-              <div className="backSide">
+              <div className="backSide" style={dark ? {boxShadow: "none"} : {}}>
                 <p className="title">
                   {selectLan == "uz" ? "BOLALAR BO'LIMI" : ""}
                   {selectLan == "en" ? "CHILDREN'S DEPARTMENT" : ""}

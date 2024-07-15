@@ -49,13 +49,21 @@ body.dark-mode a {
     max-width: 1650px;
     margin: 0 auto;
     padding: 0 20px;
+    @media (max-width: 2000px) and (min-width: 1700px){
+        max-width: 1550px;
+    }
+    @media (max-width: 1700px) and (min-width: 1555px){
+        max-width: 1350px;
+    }
+    @media (max-width: 1555px) and (min-width: 1300px){
+        max-width: 1300px;
+    }
 }
 
 main {
     background-color: #f1f1f1;
     padding: 1rem;
 }
-
 main.dark-mode {
     background-color: #121212;
     color: #e0e0e0;

@@ -58,9 +58,9 @@ footer {
   }
   .footer-bottom {
     background-color: #fff;
-    width: 190.5rem;
+    width: 190rem;
     height: 10rem;
-    margin-left: -15rem;
+    margin-left: -20rem;
     padding: 4rem;
     margin-top: 8rem;
     justify-content: space-between;
@@ -180,4 +180,68 @@ ul {
 .example-2 .icon-content a[data-social="youtube"] .filled,
 .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ff0000;
+}
+
+@media (max-width: 1880px) {
+  footer {
+    .footer-bottom {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  footer {
+    height: 70rem;
+    .footer-grid {
+      margin-left: 5rem;
+      gap: 15rem;
+      grid-template-columns: auto auto;
+    }
+  }
+}
+
+@media (max-width: 815px) {
+  footer {
+    .footer-grid {
+      margin-left: 0rem;
+      gap: 5rem;
+      grid-template-columns: auto auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    height: 100%;
+    text-align: center;
+
+    .footer-grid {
+      gap: 5rem;
+      grid-template-columns: auto;
+
+      .grid {
+        p {
+          width: auto !important;
+        }
+
+        .socialFlex {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+    footer {
+      width: auto;
+      margin-left: -5rem;
+    }
+}
+
+@media (max-width: 460px) {
+  footer {
+    margin-left: 0;
+  }
 }

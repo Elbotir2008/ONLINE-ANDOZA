@@ -1,5 +1,9 @@
 .about-section {
   width: 100%;
+  padding: 2rem; // Kichik ekranlar uchun orasini saqlash uchun padding qo'shish
+  @media (max-width: 800px) {
+    margin-top: 10rem;
+  }
   h1 {
     font-size: 5rem;
     color: #732f3c;
@@ -8,57 +12,128 @@
     text-align: center;
     line-height: 2.8rem;
     font-weight: 700;
-    text-align: center;
-  }
-  .about-tools {
-    gap: 2rem;
-    margin-left: 10rem;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+
+    @media (max-width: 1050px) {
+      margin-top: 8rem;
+      margin-bottom: 8rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+
     @media (max-width: 480px) {
-      flex-wrap: wrap;
+      font-size: 2.5rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
     }
+  }
+  
+  .about-tools {
+    display: flex;
+    flex-wrap: wrap; // Yuqori moslashtirilgan ravish uchun qorinishni yoqish
+    gap: 2rem;
+    margin: 10rem auto; // Markazga qo'yish
+    max-width: 1200px; // Maksimal eng katta eni belgilash
+    @media (min-width: 1680px) {
+      gap: 10rem;
+    }
+    @media (max-width: 1680px) {
+      margin-left: 15rem;
+    }
+    @media (max-width: 1100px) {
+      margin-left: 5rem;
+    }
+    @media (max-width: 1050px) {
+      margin: 8rem auto;
+    }
+    
+    @media (max-width: 768px) {
+      margin: 6rem auto;
+      flex-direction: column; // Kichik ekranlarda qatlamalarni vertikal tartibda joylash
+    }
+    
+    @media (max-width: 480px) {
+      margin: 4rem auto;
+    }
+    
     img {
+      width: 100%;
+      max-width: 37rem;
+      margin: 0 auto; // Tasvirni markazga joylash
+      @media (min-width: 1680px) {
+        max-width: 50rem;
+      }
       @media (max-width: 480px) {
-        width: 37rem;
-        margin-left: -10rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
+    
     .about-texts {
-      margin-left: 10rem;
-      @media (max-width: 480px) {
-        text-align: center;
+      flex: 1;
+      margin: 0 auto; // Matnni markazga joylash
+      max-width: 800px; // Maksimal eng katta eni belgilash
+      text-align: left; // Sukunatdagi o'rtacha o'rnashuv
+      
+      @media (max-width: 768px) {
+        text-align: center; // Kichik ekranlarda matnni markazlash
+        margin: 2rem auto;
       }
+      
       span {
         font-size: 2rem;
         color: #d93728;
         font-weight: 700;
       }
+      
       h2 {
         margin-top: 2rem;
-        width: 60rem;
+        width: 100%;
+        max-width: 60rem;
         font-size: 4rem;
         color: #732f3c;
         font-weight: 700;
+        
         @media (max-width: 1240px) {
-          width: 55rem;
-        }  
+          max-width: 55rem;
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 3.5rem;
+          margin-left: 0;
+        }
+        
         @media (max-width: 480px) {
-          margin-left: -29rem;
-        }  
+          font-size: 3rem;
+        }
       }
+      
       p {
         line-height: 2.8rem;
-        width: 45rem;
+        width: 100%;
+        max-width: 45rem;
         color: #732f3c;
         margin-top: 2rem;
         font-size: 2rem;
-        @media (max-width: 480px) {
+        
+        @media (max-width: 768px) {
           text-align: center;
-          width: 40rem;
-          margin-left: -21rem;
-        }  
+          max-width: 55rem;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
+      
       button {
         margin-top: 4rem;
         border-radius: 1rem;
@@ -66,10 +141,19 @@
         background-color: #732f3c;
         font-size: 1.7rem;
         color: #fff;
+        border: none;
+        cursor: pointer;
+        
+        @media (max-width: 768px) {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        
         @media (max-width: 480px) {
-          text-align: center;
-          margin-left: -29rem;
-        }  
+          width: 100%;
+          padding: 1rem 2rem;
+          font-size: 1.5rem;
+        }
       }
     }
   }

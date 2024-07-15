@@ -40,18 +40,17 @@ const Header: React.FC<HeaderProps> = ({
     setChangeColor3(setColor3);
     setChangeColor4(setColor4);
   };
-  // console.log(menuOpen)
-  // console.log(dark)
+
 
   return (
     <header className={isShrunk ? "shrink" : ""} style={dark ? { backgroundColor: "#121212" } : {}}>
       <div className="container" >
         <nav className="flex-class">
           <div className="nav-links">
-            <ul className={`flex-class ${menuOpen ? 'open' : ''}`}>
-              {selectLan == "uz" ? <img src="/logouz.png" alt="Error" onClick={() => location.reload()} /> : ""}
-              {selectLan == "en" ? <img src="/logoen.png" style={{ marginLeft: "-8 rem", marginTop: "-4rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
-              {selectLan == "ru" ? <img src="/logoru.png" style={{ width: "25rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
+            <ul className={`flex-class ${menuOpen ? 'open' : ''} ${dark ? 'dark' : ''}`}>
+              {selectLan == "uz" ? <img src="/logouz.png" className="logo" alt="Error" onClick={() => location.reload()} /> : ""}
+              {selectLan == "en" ? <img src="/logoen.png" className="logo" style={{ marginLeft: "-8 rem", marginTop: "-4rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
+              {selectLan == "ru" ? <img src="/logoru.png" className="logo" style={{ width: "25rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
               <li style={
                 changeColor1
                   ? { textDecoration: "underline" }
@@ -140,7 +139,7 @@ const Header: React.FC<HeaderProps> = ({
                 </label>
               </div>
             </form>
-            <input type="checkbox" id="checkbox" onChange={() => setMenuOpen(!menuOpen)} />
+            <input type="checkbox" id="checkbox" onClick={() => setMenuOpen(!menuOpen)} />
             <label htmlFor="checkbox" className="toggle">
               <div className="bars" id="bar1"></div>
               <div className="bars" id="bar2"></div>

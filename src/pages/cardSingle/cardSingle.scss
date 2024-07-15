@@ -3,6 +3,8 @@
   padding: 5rem 25rem;
   .flex-class {
     gap: 15rem;
+    display: flex; /* Qo'shildi */
+    justify-content: center; /* Qo'shildi */
     img {
       width: 45rem;
     }
@@ -44,8 +46,136 @@
       }
     }
   }
+
+  @media (max-width: 1200px) {
+    padding: 5rem 15rem;
+    .flex-class {
+      gap: 10rem;
+      img {
+        width: 35rem;
+      }
+    }
+    .singleTexts {
+      width: 40rem;
+      h1 {
+        width: 8rem;
+        font-size: 4rem;
+      }
+      h2,
+      h3,
+      p {
+        font-size: 2.2rem;
+      }
+      button {
+        padding: 1rem 8rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 5rem 10rem;
+    .flex-class {
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+      img {
+        width: 30rem;
+        align-self: center; /* Qo'shildi */
+      }
+    }
+    .singleTexts {
+      width: 100%;
+      margin-top: 5rem;
+      h1 {
+        width: 100%;
+        font-size: 3rem;
+        padding: 1rem 0;
+      }
+      h2,
+      h3,
+      p {
+        font-size: 2rem;
+      }
+      button {
+        padding: 1rem 5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 2rem;
+    .flex-class {
+      img {
+        width: 100%;
+        align-self: center; /* Qo'shildi */
+      }
+    }
+    .singleTexts {
+      margin-top: 2rem;
+      h1 {
+        font-size: 2.5em !important;
+      }
+      h2,
+      h3,
+      p {
+        font-size: 1.8rem !important;
+      }
+      button {
+        padding: 1rem 4rem !important;
+      }
+    }
+  }
+
+  @media (max-width: 570px) {
+    padding: 2rem 1rem;
+    .flex-class {
+      gap: 2rem;
+      img {
+        width: 100% !important; /* Yangilandi */
+        margin-left: -5rem;
+        align-self: center; /* Qo'shildi */
+      }
+    }
+    .singleTexts {
+      margin-top: 2rem;
+      width: 100%; /* Yangilandi */
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2,
+      h3,
+      p {
+        font-size: 1.8rem;
+      }
+      button {
+        padding: 0.5rem 3rem;
+      }
+    }
+  }
 }
 
+@media (max-width: 470px) {
+  .cardSingle {
+    img {
+      margin-left: -10rem !important;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .cardSingle {
+    img {
+      margin-left: -15rem !important;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .cardSingle {
+    img {
+      margin-left: -20rem !important;
+    }
+  }
+}
 .modal {
   position: fixed;
   display: flex;
@@ -55,7 +185,7 @@
     width: 60rem;
     height: 40rem;
     background-color: #fff;
-    opacity: .5;
+    opacity: 0.5;
     border-radius: 3rem;
     display: flex;
     justify-content: right;
@@ -66,13 +196,51 @@
       cursor: pointer;
     }
     .modalText {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 5rem;
-        color: #732f3c;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 5rem;
+      color: #732f3c;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .modal-content {
+      width: 50rem;
+      height: 35rem;
+      svg {
+        width: 4rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .modal-content {
+      width: 90%;
+      height: auto;
+      padding: 2rem;
+      svg {
+        width: 3rem;
+      }
+      .modalText {
+        padding-left: 2rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 100%;
+      padding: 1rem;
+      svg {
+        width: 2rem;
+      }
+      .modalText {
+        font-size: 1.2rem;
+      }
     }
   }
 }

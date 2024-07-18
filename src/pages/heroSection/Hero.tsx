@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = (
               {selectLan == "ru" ? "Быстро, удобно и качественно" : ""}
             </h1>
             <p style={dark ? { color: "#ccc" } : {}}>  
-              {selectLan == "uz" ? "Bizning bu sayitda turli xildagi andozalarni topishingiz va o'zingizga mosini sotib olishingiz mumkin. Ko'ring va zavq oling!" : ""}
+              {selectLan == "uz" ? "Bizning bu saytda turli xildagi andozalarni topishingiz va o'zingizga mosini sotib olishingiz mumkin. Ko'ring va zavq oling!" : ""}
               {selectLan == "en" ? "On our site you can find different templates and buy the one that suits you. Have a look and enjoy!" : ""}
               {selectLan == "ru" ? "На нашем сайте вы можете найти разные шаблоны и купить тот, который подойдет именно вам. Посмотрите и наслаждайтесь!" : ""}
             </p>

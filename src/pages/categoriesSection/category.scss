@@ -21,7 +21,19 @@
       margin-bottom: -20rem;
     }
     @media (max-width: 480px) {
-      font-size: 2rem;
+      font-size: 3rem;
+    }
+    @media (max-width: 440px) {
+      margin-left: -5rem !important ;
+    }
+    @media (max-width: 400px) {
+      margin-left: -6 rem;
+    }
+    @media (max-width: 600px) {
+      margin-left: -2rem;
+    }
+    @media (max-width: 550px) {
+      margin-left: -6rem;
     }
   }
 

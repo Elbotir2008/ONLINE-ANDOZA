@@ -9,7 +9,6 @@ const Footer: React.FC<AndozalarProps> = (
         selectLan
     }
 ) => {
-
     return (
         <footer id="contact" style={dark ? { backgroundColor: "#121212" } : {}}>
             <div className="container">
@@ -17,7 +16,7 @@ const Footer: React.FC<AndozalarProps> = (
                     <div className="grid">
                         <h1 style={dark ? { color: "#fff" } : {}}>Online Andoza</h1>
                         <p style={dark ? { color: "#ccc" } : {}}>
-                            {selectLan == "uz" ? "Biz bilan bog'lanishingiz uchun pastagi ilovalarning ustiga bosib, contactimizni olishingiz va bizga yozishingiz mumkin." : ""}
+                            {selectLan == "uz" ? "Biz bilan bog'lanishingiz uchun pastdagi ilovalardan birining ustiga bosib, kontaktimizni olishingiz va bizga yozishingiz mumkin." : ""}
                             {selectLan == "en" ? "To contact us, you can click on the application below, get our contact and write to us." : ""}
                             {selectLan == "ru" ? "Чтобы связаться с нами, вы можете нажать на заявку ниже, получить наши контакты и написать нам." : ""}
                         </p>
@@ -193,9 +192,9 @@ const Footer: React.FC<AndozalarProps> = (
 
                         </h1>
                         <p style={dark ? { color: "#ccc" } : {}}>
-                            {selectLan == "uz" ? "Toshkent shahar Yunusobod tuman 4 kvartal 87 yu" : ""}
-                            {selectLan == "en" ? "Tashkent city Yunusabad district 4 quarter 87" : ""}
-                            {selectLan == "ru" ? "город Ташкент Юнусабадский район 4 квартал 87" : ""}
+                            {selectLan == "uz" ? "Toshkent shahar Yunusobod tumani 4-kvartal 87-uy" : ""}
+                            {selectLan == "en" ? "Tashkent city Yunusabad district 4-quarter 87" : ""}
+                            {selectLan == "ru" ? "город Ташкент Юнусабадский район 4-квартал 87" : ""}
                             <br />
                             +998 94 364 57 77
                             <br />

@@ -48,9 +48,7 @@ const Header: React.FC<HeaderProps> = ({
         <nav className="flex-class">
           <div className="nav-links">
             <ul className={`flex-class ${menuOpen ? 'open' : ''} ${dark ? 'dark' : ''}`}>
-              {selectLan == "uz" ? <img src="/logouz.png" className="logo" alt="Error" onClick={() => location.reload()} /> : ""}
-              {selectLan == "en" ? <img src="/logoen.png" className="logo" style={{ marginLeft: "-8 rem", marginTop: "-4rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
-              {selectLan == "ru" ? <img src="/logoru.png" className="logo" style={{ width: "25rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
+              <img src="/logoFirma.svg" className="logo" alt="Error" onClick={() => location.reload()} />
               <li style={
                 changeColor1
                   ? { textDecoration: "underline" }
@@ -145,6 +143,9 @@ const Header: React.FC<HeaderProps> = ({
               <div className="bars" id="bar2"></div>
               <div className="bars" id="bar3"></div>
             </label>
+            {selectLan == "uz" ? <img src="/logouz.png" id="myLogo" className="logouz" alt="Error" onClick={() => location.reload()} /> : ""}
+            {selectLan == "ru" ? <img src="/logoru.png" id="myLogo" className="logoru" style={{ width: "20rem" }} alt="Error" onClick={() => location.reload()} /> : ""}
+            {selectLan == "en" ? <img src="/logoen.png" id="myLogo" className="logoen" alt="Error" onClick={() => location.reload()} /> : ""}
           </div>
         </nav>
       </div>

@@ -79,6 +79,12 @@
       }
     }
 
+    svg {
+      @media (max-width: 1246px) {
+        display: none;
+      }
+    }
+
     .input::placeholder {
       color: #9e9ea7;
     }

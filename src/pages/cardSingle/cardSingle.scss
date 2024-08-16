@@ -101,12 +101,12 @@
       }
     }
   }
-
-  @media (max-width: 768px) {
+  
+  @media (max-width: 770px) {
     padding: 2rem 2rem;
     .flex-class {
       img {
-        width: 100%;
+        width: 50%;
         align-self: center; /* Qo'shildi */
       }
     }
@@ -118,6 +118,7 @@
       h2,
       h3,
       p {
+        width: 30rem;
         font-size: 1.8rem !important;
       }
       button {
@@ -132,7 +133,6 @@
       gap: 2rem;
       img {
         width: 100% !important; /* Yangilandi */
-        margin-left: -5rem;
         align-self: center; /* Qo'shildi */
       }
     }
@@ -152,30 +152,59 @@
       }
     }
   }
+
+  @media (max-width: 500px) {
+    .flex-class {
+      img {
+        width: 100% !important;
+        align-self: center; /* Qo'shildi */
+        margin-left: -10rem !important; /* Yangilandi */
+      }
+    }
+    .singleTexts {
+      h2,
+      h3,
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .flex-class {
+      img {
+        width: 100% !important;
+        align-self: center; /* Qo'shildi */
+        margin-left: -15rem !important; /* Yangilandi */
+      }
+    }
+    .singleTexts {
+      h2,
+      h3,
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    .flex-class {
+      img {
+        width: 100% !important;
+        align-self: center; /* Qo'shildi */
+        margin-left: -20rem !important; /* Yangilandi */
+      }
+    }
+    .singleTexts {
+      h2,
+      h3,
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 
-@media (max-width: 470px) {
-  .cardSingle {
-    img {
-      margin-left: -10rem !important;
-    }
-  }
-}
-@media (max-width: 400px) {
-  .cardSingle {
-    img {
-      margin-left: -15rem !important;
-    }
-  }
-}
-
-@media (max-width: 380px) {
-  .cardSingle {
-    img {
-      margin-left: -20rem !important;
-    }
-  }
-}
 .modal {
   position: fixed;
   display: flex;
@@ -240,6 +269,22 @@
       }
       .modalText {
         font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media (max-width: 468px) {
+    .modal-content {
+      width: 90% !important; /* Yangilandi */
+      padding: 1rem; /* Yangilandi */
+      svg {
+        width: 2rem;
+      }
+      .modalText {
+        width: 100%; /* Yangilandi */
+        padding-left: 0; /* Yangilandi */
+        font-size: 1.2rem;
+        text-align: center; /* Yangilandi */
       }
     }
   }
